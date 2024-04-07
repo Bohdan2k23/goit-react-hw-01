@@ -1,26 +1,26 @@
 import css from "./Profile.module.css";
 export default function Profile({ name, tag, location, image, stats }) {
   return (
-    <div>
-      <div>
-        <img className={css.photo} src={image} alt="User avatar" />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+    <div className={css.card}>
+      <div className={css.userInfo}>
+        <img className={css.logo} src={image} width={100} alt="User avatar" />
+        <p className={css.title}>{name}</p>
+        <p className={css.text}>@{tag}</p>
+        <p className={css.text}>{location}</p>
       </div>
 
-      <ul className="list-none flex-center gap-20">
-        <li className="flex-col">
-          <span>Followers</span>
-          <span>{stats.followers}</span>
+      <ul className={css.list}>
+        <li className={css.listItem}>
+          <span className={css.stat}>Followers</span>
+          <span className={css.statValue}>{stats.followers}</span>
         </li>
-        <li className="flex-col">
-          <span>Views</span>
-          <span>{stats.views}</span>
+        <li className={css.listItem}>
+          <span className={css.stat}>Views</span>
+          <span className={css.statValue}>{stats.views}</span>
         </li>
-        <li className="flex-col">
-          <span>Likes</span>
-          <span>{stats.likes}</span>
+        <li className={css.listItem}>
+          <span className={css.stat}>Likes</span>
+          <span className={css.statValue}>{stats.likes}</span>
         </li>
       </ul>
     </div>

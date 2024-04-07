@@ -1,0 +1,31 @@
+.table {
+  width: 500px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 14px;
+  margin: auto;
+  margin-top: 20px;
+}
+.head {
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.headItem {
+  padding: 4px 0;
+}
+
+.body {
+  width: 100%;
+}
+.bodyItem {
+  border: 1px solid black;
+  padding: 4px 0;
+  text-transform: capitalize;
+}
+
+.body:nth-child(even) {
+  background-color: lightgray;
+}
